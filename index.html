@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+<meta name="theme-color" content="#F6F0E5" />
+<meta
+  name="description"
+  content="A handmade birthday memory drop by Storymint Studio."
+/>
+
+<title>A Birthday Drop — Storymint Studio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700&family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+  rel="stylesheet"
+>
+
+<link rel="stylesheet" href="bday2.css">
+</head>
+
+<body>
+
+<div class="page-noise"></div>
+
+<main class="story-frame" id="storyFrame">
+
+  <div class="brand">
+   <span>FROM Shubham Gupta</span>
+  </div>
+
+  <div class="progress" id="progress">
+    <span class="progress-dot active"></span>
+    <span class="progress-dot"></span>
+    <span class="progress-dot"></span>
+    <span class="progress-dot"></span>
+  </div>
+
+  <div class="scenes">
+
+    <!-- ====================================================
+         SCENE 1 — COVER
+         Date is set from CONFIG.day in script.js — not editable here.
+    ===================================================== -->
+
+    <section class="scene active" data-scene="0">
+
+      <div class="scene-inner">
+
+        <div class="cover-layout">
+
+          <div class="cover-copy">
+
+            <p class="eyebrow">
+              A little birthday story
+            </p>
+
+            <h1 class="title">
+              Today is<br>
+              <em>all about you.</em>
+            </h1>
+
+            <p class="subtext">
+              A small collection of memories, words,
+              photographs and one little surprise —
+              made especially for your birthday.
+            </p>
+
+            <div class="hand-note">
+              keep this little day forever ♡
+            </div>
+
+            <div class="actions">
+              <button class="action" id="startBtn">
+                begin the story →
+              </button>
+            </div>
+
+          </div>
+
+          <div class="date-card">
+
+            <div class="tape one"></div>
+
+            <div class="date-small">
+              birthday date
+            </div>
+
+            <div class="date-number-wrap">
+
+              <span
+                class="date-number-display"
+                id="dateNumber"
+              >24</span>
+
+              <span
+                class="date-suffix"
+                id="dateSuffix"
+              >th</span>
+
+            </div>
+
+            <p class="subtext" style="text-align:center; margin:0 auto;">
+              Every little detail here was<br>
+              picked with care, just for you.
+            </p>
+
+            <div class="stamped">
+              made<br>
+              with<br>
+              love
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         SCENE 2 — BIRTHDAY
+    ===================================================== -->
+
+    <section class="scene" data-scene="1">
+
+      <button
+        class="back"
+        data-back
+        type="button"
+      >
+        ← back
+      </button>
+
+      <div class="scene-inner">
+
+        <div class="birthday-layout">
+
+          <article class="birthday-letter">
+
+            <div class="tape two"></div>
+
+            <p class="eyebrow">
+              a birthday note
+            </p>
+
+            <h2 class="letter-title">
+              Happy Birthday
+            </h2>
+
+            <p class="letter-script">
+              To Sakshu, who has a way of making even the most ordinary moments feel a little more special.
+
+              <br><br>
+
+              Today is a reminder of how much joy,
+              laughter and warmth you bring into
+              the lives around you.
+
+              <br><br>
+
+              So make a wish, take a deep breath,
+              and enjoy every little part of your life.
+            </p>
+
+            <p class="signature">
+              with love,
+            </p>
+
+          </article>
+
+
+          <div class="cake-area">
+
+            <h2 class="birthday-heading">
+              make a wish
+            </h2>
+
+            <p class="birthday-small">
+              it is your <strong id="dayEcho">19</strong>th birthday ✶
+            </p>
+
+            <div
+              class="cake"
+              id="cake"
+            >
+
+              <div class="cake-plate"></div>
+
+              <div class="cake-base"></div>
+
+              <div class="cake-top"></div>
+
+              <div class="cream-drip drip-a"></div>
+              <div class="cream-drip drip-b"></div>
+              <div class="cream-drip drip-c"></div>
+              <div class="cream-drip drip-d"></div>
+
+              <div class="candle a"></div>
+              <div class="candle b"></div>
+              <div class="candle c"></div>
+
+              <div class="flame a"></div>
+              <div class="flame b"></div>
+              <div class="flame c"></div>
+
+            </div>
+
+            <div
+              class="candle-message"
+              id="candleMessage"
+            >
+              blow out the candles ✨
+            </div>
+
+            <div class="blow-row">
+
+              <button
+                class="blow-btn primary"
+                id="tapBlow"
+                type="button"
+              >
+                💨 tap to blow
+              </button>
+
+              <button
+                class="blow-btn"
+                id="micBlow"
+                type="button"
+              >
+                🎤 use mic
+              </button>
+
+            </div>
+
+            <div class="actions">
+
+              <button
+                class="action"
+                id="birthdayNext"
+                type="button"
+                style="display:none"
+              >
+                save the memories →
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         SCENE 3 — MEMORIES
+         Name and photos are set from CONFIG in script.js —
+         not editable here.
+    ===================================================== -->
+
+    <section class="scene" data-scene="2">
+
+      <button
+        class="back"
+        data-back
+        type="button"
+      >
+        ← back
+      </button>
+
+      <div class="scene-inner">
+
+        <div class="memory-layout">
+
+          <div class="memory-copy">
+
+            <p class="eyebrow">
+              memory wall
+            </p>
+
+            <h2 class="title">
+              the moments<br>
+              <em>worth keeping.</em>
+            </h2>
+
+            <p class="subtext">
+              A few favourite photographs, turned into
+              a little wall of memories.
+            </p>
+
+            <p class="memory-caption">
+              Happy Birthday,
+            </p>
+
+            <span
+              id="nameDisplay"
+              class="name-display"
+            >Sakshi</span>
+
+            <div class="actions">
+              <button
+                class="action"
+                id="memoryNext"
+                type="button"
+              >
+                wrap it all up →
+              </button>
+            </div>
+
+          </div>
+
+
+          <div class="memory-wall">
+
+            <div class="wall-note">
+              little moments ♡
+            </div>
+
+            <div
+              class="polaroid-grid"
+              id="polaroidGrid"
+            >
+              <!-- Polaroid cards are rendered here by script.js from CONFIG.photos -->
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         SCENE 4 — LETTER + ENVELOPE
+         Message is set from CONFIG.message in script.js —
+         not editable here.
+    ===================================================== -->
+
+    <section class="scene" data-scene="3">
+
+      <button
+        class="back"
+        data-back
+        type="button"
+      >
+        ← back
+      </button>
+
+      <div class="scene-inner">
+
+        <div class="final-layout">
+
+          <div class="envelope-side">
+
+            <div
+              class="envelope"
+              id="envelope"
+              role="button"
+              tabindex="0"
+              aria-label="Open birthday envelope"
+            >
+
+              <div class="envelope-back"></div>
+
+              <div class="envelope-pocket"></div>
+
+              <div class="envelope-flap"></div>
+
+              <div class="seal">
+                ✦
+              </div>
+
+            </div>
+
+            <div
+              class="open-note"
+              id="openNote"
+            >
+              tap the envelope to open ♡
+            </div>
+
+          </div>
+
+
+          <article
+            class="letter-paper"
+            id="letterPaper"
+          >
+
+            <p class="eyebrow">
+              one more thing
+            </p>
+
+            <h2 class="paper-heading">
+              A Birthday Letter
+            </h2>
+
+            <p class="paper-for">
+              for <strong id="nameEcho">Sweety</strong>
+            </p>
+
+            <p
+              class="message-display"
+              id="messageDisplay"
+            ></p>
+
+            <p class="paper-sign">
+              always cheering for you,
+            </p>
+
+            <div class="actions">
+
+              <button
+                class="action"
+                id="surpriseBtn"
+                type="button"
+              >
+                ✦ one last surprise
+              </button>
+
+              <button
+                class="action secondary"
+                id="restartBtn"
+                type="button"
+              >
+                start again ↺
+              </button>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <!-- ====================================================
+       SURPRISE
+  ===================================================== -->
+
+  <div
+    class="surprise"
+    id="surprise"
+  >
+
+    <button
+      class="close-surprise"
+      id="closeSurprise"
+      type="button"
+      aria-label="Close surprise"
+    >
+      ×
+    </button>
+
+    <p class="eyebrow">
+      just for you
+    </p>
+
+    <h2 class="surprise-title">
+      you are the best part.
+    </h2>
+
+    <p class="surprise-subtitle">
+      flowers, wishes &amp; a whole lot of love ♡
+    </p>
+
+
+    <div class="bouquet">
+
+      <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="center"></div>
+      </div>
+
+
+      <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="center"></div>
+      </div>
+
+
+      <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="center"></div>
+      </div>
+
+
+      <div class="stem a"></div>
+      <div class="stem b"></div>
+      <div class="stem c"></div>
+
+      <div class="leaf a"></div>
+      <div class="leaf b"></div>
+
+      <div class="wrap">
+        <div class="ribbon"></div>
+      </div>
+
+    </div>
+
+
+    <div
+      class="surprise-words"
+      id="surpriseWords"
+    ></div>
+
+  </div>
+
+</main>
+
+<script src="bday2.js" defer></script>
+
+</body>
+</html>
